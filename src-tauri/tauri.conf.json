@@ -4,7 +4,8 @@
     "beforeBuildCommand": "nx build low-level-js",
     "beforeDevCommand": "nx serve low-level-js",
     "devPath": "http://localhost:4200",
-    "distDir": "../dist/apps/low-level-js"
+    "distDir": "../dist/apps/low-level-js",
+    "withGlobalTauri": true
   },
   "package": {
     "productName": "low-level-js",

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-// import { readDir, BaseDirectory } from '@tauri-apps/api/fs';
+import { readDir, BaseDirectory } from '@tauri-apps/api/fs';
 
 @Component({
   selector: 'app-explorer',
@@ -13,11 +13,10 @@ export class ExplorerComponent implements OnInit {
   }
 
   async readDir() {
-    
-    // const entries = await readDir('users', { dir: BaseDirectory.AppData, recursive: true });
-    // for (const entry of entries) {
-    //   console.log(`Entry: ${entry.path}`);
-    // }
+    const entries = await readDir('Desktop', { dir: BaseDirectory.Home, recursive: false });
+    for (const entry of entries) {
+      console.log(`Entry: ${entry.path}`);
+    }
 
   }
 }
