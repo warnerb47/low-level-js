@@ -85,6 +85,12 @@
         "staticFilePath": "dist/apps/low-level-js/browser",
         "spa": true
       }
+    },
+    "tauri-dev": {
+      "command": "tauri dev"
+    },
+    "tauri-build": {
+      "command": "tauri build"
     }
   }
 }
