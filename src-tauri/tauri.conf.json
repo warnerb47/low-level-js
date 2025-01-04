@@ -69,10 +69,10 @@
     "windows": [
       {
         "fullscreen": false,
-        "height": 600,
+        "height": 800,
+        "width": 1200,
         "resizable": true,
-        "title": "low-level-js",
-        "width": 800
+        "title": "low-level-js"
       }
     ]
   }

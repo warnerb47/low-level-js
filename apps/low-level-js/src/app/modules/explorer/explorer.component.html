@@ -1,1 +1,28 @@
-<p>explorer works!</p>
+<div class="flex w-full h-screen">
+    <div class="flex h-full py-4 w-1/6 flex-col space-y-4">
+        @for (item of navItems(); track $index) {
+        <div tabindex="{{$index}}"
+            class="flex items-center space-x-2 w-full px-4 py-3 w-full cursor-pointer hover:bg-gray-100"
+            [ngClass]="{'bg-gray-200': activeNavItem()?.label === item?.label}" (click)="readDir(item)"
+            (keyup.enter)="readDir(item)">
+            <img class="h-5 text-blue-700" src="icons/{{item.icon}}" alt="{{item.icon}}">
+            <div class="text-lg font-medium text-secondary">{{item.label}}</div>
+        </div>
+        }
+    </div>
+    <div class="flex h-full w-full flex-col space-y-4 bg-gray-50 overflow-x-auto">
+        <div class="grid grid-cols-6 w-full px-4 py-8 gap-x-3 gap-y-6">
+            @for (fileIcon of fileIcons(); track $index) {
+            <div tabindex="{{$index}}" class="flex flex-col items-center justify-center space-y-2 cursor-pointer p-2 rounded-2xl hover:bg-gray-200"
+                (click)="runFile(fileIcon)" (keyup.enter)="runFile(fileIcon)">
+                <img class="h-10 text-green-700" src="icons/{{fileIcon.icon}}" alt="{{fileIcon.icon}}">
+                <div class="text-center text-sm w-24 line-clamp-3">{{fileIcon.name}}</div>
+            </div>
+            }@empty {
+            <div class="flex items-center justify-center h-full w-full">
+                <div class="text-secondary">Liste vide</div>
+            </div>
+            }
+        </div>
+    </div>
+</div>
