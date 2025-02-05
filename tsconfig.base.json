@@ -14,7 +14,9 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@low-level-js/lljs-core": ["libs/lljs-core/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
