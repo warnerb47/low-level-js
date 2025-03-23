@@ -15,6 +15,7 @@
     "@angular/router": "~19.0.0",
     "@tauri-apps/api": "^1.6.0",
     "i": "^0.3.7",
+    "ol": "^10.4.0",
     "preline": "^2.7.0",
     "rxjs": "~7.8.0",
     "zone.js": "~0.15.0"
@@ -42,6 +43,7 @@
     "@tauri-apps/cli": "^1.6.3",
     "@types/jest": "^29.5.12",
     "@types/node": "18.16.9",
+    "@types/openlayers": "^4.6.23",
     "@typescript-eslint/utils": "^8.13.0",
     "angular-eslint": "^19.0.2",
     "autoprefixer": "^10.4.0",
